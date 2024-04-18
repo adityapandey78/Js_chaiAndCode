@@ -10,7 +10,7 @@ let isLoggedIn=false
 
 //primitive data types
 //number= 2to power 53
-//bigint for biggervalues
+//BigInt for bigger values
 //boolean => true/false
 //null=> standalone Value
 //undefined=> value is not assigned yet
