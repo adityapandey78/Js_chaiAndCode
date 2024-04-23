@@ -13,6 +13,6 @@ const course={
 //idhar agar uska bada naam hai to uske dusra name bhi de skta hun
 const {courseInstructer:tr}=course;
 console.log(tr);
-
+/////
 
 
