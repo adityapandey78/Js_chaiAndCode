@@ -13,3 +13,5 @@
     console.log(`Hii! ${name} is using the arrow function`);
 })("Aditya"); //isme second wale me mai arg bhi pass kr skta hun
 
+//ternary operator
+//
