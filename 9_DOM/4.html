@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM|Chai Aur Code</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <ul class="language">
+        <li>Javacript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li= document.createElement('li');//ek consyt  bna ke usme store kra diya
+        li.innerHTML=`${langName}`//isse li me attach kr rhe
+        document.querySelector('.language').appendChild(li); //isse append kr diye usme
+
+    }
+    addLanguage("Python")
+    addLanguage("Typescript")
+    //with above method we can add new elements 
+    // function addOptiLanguage(langName){
+    //     const li=document.createElement('li');
+    //     li.appendChild(document.createTextNode(langName)); //isse li me append kr rhe hain -> uske baad ek text node create kr rhe hain and then usme add kr de rhe hain langName ko
+    //     document.querySelector('.lamguage').appendChild(li);
+    // }
+    //addOptiLanguage('GoLang');
+
+
+    //Editing of the  childs or nodes
+    const secondLang=document.querySelector("li:nth-child(2)")
+    console.log(secondLang); //isse pta kiya ki kon sa select hua hai
+    //secondLang.innerHTML="Mojo" //isse bhji edit ho skta hai
+
+    const newli=document.createElement('li')
+    newli.textContent="Mojo"
+    secondLang.replaceWith(newli)//isse wo replace kr dega
+
+    //edit
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML='<li>Typescript</li>'
+
+    //remove
+
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove();
+</script>
+</html>

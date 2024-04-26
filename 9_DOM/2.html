@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM| Chai aur Code</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    //console.log(parent);
+    //console.log(parent.children[1].innerHTML); //it will give HTML Collection
+    //it will print all the childs 
+    //since the HTML elements behaved like an array so we can apply for loop here to perfom operations
+    for (let i = 0; i<parent.children.length; i++) {
+        //console.log(parent.children[i].innerHTML);
+    }
+    parent.children[1].style.color="orange"//we can color the chiled as well suing styles
+
+    //console.log(parent.firstElementChild);//isse parent dse child pe move kr rhe hain 
+
+    //console.log(parent.lastElementChild);//likeweise we can access the last child as well
+
+   const dayOne= document.querySelector('.day') //isse day ki clas ko fetch kr liya
+    console.log(dayOne);// isse prinyt rk diya day ko
+    console.log(dayOne.parentElement); //isse uske parent elemt ko fect kr skte hain
+    console.log(dayOne.nextElementSibling); //isse uske next sibbling pe jaate hain
+
+    console.log("NODES: ",parent.childNodes); //it shows the all the tree nodes with this
+    //the browser works like tree and we need to optimise the Javascript 
+    
+
+</script>
+</html>

@@ -9,7 +9,7 @@ let age=19;
 let isLoggedIn=false
 
 //primitive data types
-//number= 2to power 53
+//number= 2 to power 53
 //BigInt for bigger values
 //boolean => true/false
 //null=> standalone Value
@@ -20,7 +20,7 @@ let isLoggedIn=false
 if you want to know the data type of any variable
 */
 
-console.log(typeof age);//ot will tell number
+console.log(typeof age);//It will tell number
 
 console.log(typeof null); //type of NULL is obeject
 console.log(typeof undefined); //its type is undefined coz it is a data type

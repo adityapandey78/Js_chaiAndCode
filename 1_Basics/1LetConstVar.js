@@ -2,7 +2,7 @@ const accountId=144567
 let accountEmail="Aditya@shamlatech.com"
 var accountPassword="12345"
 let accountCity="Ranchi"
-//cant change the const values
+//cant change the `const` values
 //accountId=2
 console.log(accountId);
 accountEmail="hc@aditya.com"

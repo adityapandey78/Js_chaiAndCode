@@ -7,19 +7,21 @@ console.log(negValue);
 
 console.log("1"+2); //=> 12
 console.log(1+"2"); //=> 12
-console.log("1"+2+2); //=> 122
+console.log("1"+2+2); //=> 122 //here we have assigned the first val as string that's the reason its concatenating
 //*****/
-console.log(1+2+"3"); //=>33
- 
+console.log(1+2+"3"); //=>33 
+
 //now checking the null
+console.log("checking the NULL");
 console.log(null>0); //false
 console.log(null==0); //false
 console.log(null>=0);//true
 
-//Equality check == ad comparisos < > >= <= work differently. 
+// +++++++ Imp. +++++++
+//Equality check == and comparisons < > >= <= work differently. 
 //Comparisons convert null to a number , treating it as a zero
 //that's why (3)>=0 is true and null> 0 false
-
+console.log("Checking the undefined");
 console.log(undefined==0);
 
 

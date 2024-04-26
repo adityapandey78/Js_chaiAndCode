@@ -22,7 +22,7 @@ let booleanIsLogedIn= Boolean (isLoggedIn)
 console.log("boolean Conversion");
 console.log(booleanIsLogedIn);
 
-
+//If we tall about the value-type in the 
 //1=> true
 //""=> false ("Empty string")
 //"aditya"=>true

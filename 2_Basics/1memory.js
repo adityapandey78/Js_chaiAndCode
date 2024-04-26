@@ -6,7 +6,7 @@ let anothername=myYoutubename
 
 anothername="chaiaurcode" //trying to rename
 console.log(myYoutubename);
-console.log(anothername);
+console.log("Another name",anothername);
 
 //idhar stack me ek copy bn jaata hai, so jo bhi change hog aus copy ka hi hoga
 
