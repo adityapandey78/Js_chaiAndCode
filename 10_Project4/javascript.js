@@ -1,9 +1,11 @@
 //Generating a random number multiplying iut by 100 coz we want to get two digit number anfd adding 1 for the case when we get number as 0.004 so that output remains at least 1
-const randomNumber=parseInt(Math.random()*100+1);
+let randomNumber=parseInt(Math.random()*100+1);
+
 const submit=document.querySelector('#subt');
 const userInput=document.querySelector('#guessField');
 const guessSlot=document.querySelector('.guesses');
 const remaining=document.querySelector('.lastResult');
+const lowOrHi=document.querySelector('.lowOrHi');
 const startOver=document.querySelector('.resultParas');
 
 const p=document.createElement('p');
@@ -64,7 +66,7 @@ function displayGuess(guess){
 userInput.value='';
 guessSlot.innerHTML+=`${guess},  `;
 numGuess++;
-remaining.innerHTML=`${10-numGuess}`
+remaining.innerHTML=`${11-numGuess}`
 }
 
 function displayMessage(message){
@@ -76,9 +78,24 @@ function endGame(){
     userInput.value='';
     userInput.setAttribute('disabled','');
     p.classList.add('button')
-    p.innerHTML=`<h2 id="newgame"></h2>`
+    p.innerHTML=`<h2 id="newGame">Start New Game</h2>`
+    startOver.appendChild(p);
+    playGame=false;
+    newGame();
+
 }
 
 function newGame(){
-
+//it will start a new game
+const newGameButton=document.querySelector('#newGame');
+newGameButton.addEventListener('click',function(e){
+     randomNumber=parseInt(Math.random()*100+1);
+     prevGuess=[];
+     numGuess=1;
+     guessSlot.innerHTML='';
+     remaining.innerHTML=`${11-numGuess}`
+     userInput.removeAttribute('disabled');
+     startOver.removeChild(p);
+    playGame=true;
+});
 }
