@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I am Walter White H.</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    // setInterval( function(){
+    //     console.log("Aditya", Date.now());
+    // },2000) //ye function chalte hi rahega 
+    // set iterval executes a function after a set interval of time
+
+const sayDate= function(str){
+    console.log(str,Date.now());
+}
+
+//we can pass a parameter as well
+const intervalId= setInterval(sayDate,1000,"Walter White is King!");
+clearInterval(intervalId)//clearinterval is the function to clear the setInterva; function 
+
+</script>
+</html>

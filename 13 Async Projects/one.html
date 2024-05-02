@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I am Walter White H and I am a chemistry teacher!</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(() => {
+    //     console.log("Aditya!");
+    // }, 2000);
+    //Set timeout can be used to perform an operation after a period of time.
+    const sayMyName=function(){
+        console.log("Walter White");
+    }
+    const changeText= function(){
+        document.querySelector('h1').innerHTML="I am Hisenberg" //selecting the H1 heading  and changing the text
+    
+    }
+
+    const changeMe= setTimeout(changeText,2000) //set timeout needs the function ref and the timeout time in mS.
+    //Now above function will change the text there
+    
+    //Now accessingg the button to stop the timeout if it is pressed
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe); //it will clear the passing of the function and  and stop it to occur
+        console.log('STOPPEDDD!');
+    })
+</script>
+</html>

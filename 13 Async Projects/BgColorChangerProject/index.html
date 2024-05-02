@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+</head>
+<body>
+    <h1>Click start and change the background color every second!</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+//generating a random color
+const randomColor= function(){
+    const hex='0123456789ABCDEF';
+    let color= '#';
+    for( let i=0;i<6;i++){
+        color+=hex[Math.floor(Math.random()*16)];//it is generating a random number
+    }
+    return color; //it return the colors
+};
+
+let intervalId; //making it global variable so that we can access in other mthods as well
+ const startChangingColor=function(){
+    if(!intervalId){
+        intervalId=setInterval(changeBgColor,1000);
+    }
+
+    function changeBgColor(){
+        document.body.style.background=randomColor(); //accessing the color of background
+    }
+ };
+ const stopChangingColor=function(){
+    clearInterval(intervalId);
+    intervalId=null; //setting it null so that i when I  press stop the intervalId variable get fre and some memorygets relaeased
+ }
+ document.querySelector('#start').addEventListener('click',startChangingColor); //fetching the start
+
+ document.querySelector('#stop').addEventListener('click',stopChangingColor); //fetching the stop button
+
+</script>
+</html>
