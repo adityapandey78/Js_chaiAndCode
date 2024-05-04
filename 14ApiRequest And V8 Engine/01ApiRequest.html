@@ -1,0 +1,69 @@
+<!--XMLHTTP  Request is also a very smart tool , I used to be used earlier but not used nowdays-->
+
+<!--
+    The XMLHttpRequest.readyState property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:
+
+Value	State	   Description
+0	    UNSENT	      Client has been created. open() not called yet.
+1	    OPENED	      open() has been called.
+2	    HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	    LOADING	    Downloading; responseText holds partial data.
+4	    DONE	T   he operation is complete.
+UNSENT
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+ <p>
+    Value	State	   Description <br>
+    0	    UNSENT	   ->   Client has been created. open() not called yet. <br>
+    1	    OPENED	 ->     open() has been called. <br>
+    2	    HEADERS_RECEIVED ->	send() has been called, and headers and status are available. <br>
+    3	    LOADING	   -> Downloading; responseText holds partial data. <br>
+    4	    DONE	->T   he operation is complete.
+    UNSENT <br>
+
+    <div class="image"> <span><button class="button">Click to Know about the user</button></span></div>
+    <div class="username"></div>
+ </p>
+</body>
+<script>
+    //XML ko AJAX request bheji jaati hai
+    //XML HTTP request isse data send and recvieve kr sktehain //ye ek class hai jisse object bnaya ja skta hai
+    const requestUrl='https://api.github.com/users/adityapandey78'
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET',requestUrl);
+    //console.log(xhr.readyState); //it will tell ki ready state 0 se 1 hui
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        //jese state change hoti hai wese hi har baar function execute hoti hai 
+        if(xhr.readyState==4){
+            const data=JSON.parse(this.responseText); //is response ko ek var me store kr liya
+            //and JSON me store kra liya 
+            console.log(data);//isse pura hi text print kra skte hainb
+            console.log(typeof data); //data is string type it shows that the data we get from the API is in the form of string
+            console.log(data.followers);//follower mera ek 
+        }
+    
+    const button=document.querySelector('.button')
+    const image=document.querySelector('.image')
+    const username=document.querySelector('.username')
+    function  getTheData(){
+        const button= document.querySelector('.button');
+        button.addEventListener('click' ,function(e){
+            username.innerHTML=`${data.username}`
+            image.innerHTML=`${data.avatar_url
+}`
+        })
+    }
+}
+    xhr.send();
+    //jese jese start hoti hai API send honi wese hi wese inki states change hoti hain  e.eg open se 1 aayegga send se 2 loading se 3
+    //and done se 4
+</script>
+</html>
