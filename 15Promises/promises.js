@@ -138,4 +138,12 @@ async function getAllUsers(){
     console.log(data);
  }).catch((error)=> console.log(error));
 
-//here we can see that the fetch API is working at first and then other methods are executing  
+//here we can see that the fetch API is working at first and then other methods are executing   
+/*
+A fetch() promise will reject with a TypeError when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful fetch() would include checking that the promise resolved, then checking that the Response.ok property has a value of true.
+
+//=> Ye error ek response hi hota hai 
+ye resolve me hi milta hai, reject me chijein tb milti hain jb wo pass on hi ni krta hai value, but idhar error wale me pass on ho ri hai hai value so ye resolve as as response me milta hai
+*/
+
+//https://developer.mozilla.org/en-US/docs/Web/API/fetch#syntax
