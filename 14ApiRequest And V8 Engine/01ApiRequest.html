@@ -48,18 +48,17 @@ UNSENT
             console.log(data);//isse pura hi text print kra skte hainb
             console.log(typeof data); //data is string type it shows that the data we get from the API is in the form of string
             console.log(data.followers);//follower mera ek 
-        }
-    
-    const button=document.querySelector('.button')
-    const image=document.querySelector('.image')
-    const username=document.querySelector('.username')
-    function  getTheData(){
-        const button= document.querySelector('.button');
-        button.addEventListener('click' ,function(e){
-            username.innerHTML=`${data.username}`
-            image.innerHTML=`${data.avatar_url
-}`
-        })
+        
+            //Dispplaying data after receiving response
+            const button=document.querySelector('.button');
+            const image=document.querySelector('.image');
+            const username=document.querySelector('.username');
+
+
+            button.addEventListener('click' ,function(e){
+            username.innerHTML=`${data.login}`
+            image.innerHTML=` <img src="${data.avatar_url}" alt="Profile Picture">`;
+            });
     }
 }
     xhr.send();
