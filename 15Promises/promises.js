@@ -137,3 +137,5 @@ async function getAllUsers(){
  .then((data)=>{
     console.log(data);
  }).catch((error)=> console.log(error));
+
+//here we can see that the fetch API is working at first and then other methods are executing  
