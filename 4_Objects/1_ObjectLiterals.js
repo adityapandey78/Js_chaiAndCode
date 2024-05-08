@@ -23,7 +23,7 @@ const JsUser={
 
 }
 console.log(JsUser.name); //this is the general representation to call the objects' instances
-console.log(JsUser["full name"]); //this method can be used eben if we define the instances in the char form
+console.log(JsUser["full name"]); //this method can be used even if we define the instances in the char form
 console.log(JsUser.Symbol);
 
 JsUser.email="aditya@gmail.com";

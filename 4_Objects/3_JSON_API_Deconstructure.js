@@ -4,7 +4,7 @@ const course={
     courseInstructer:"Hitesh OG!"
 }
 
-//course.courseInstructer => ese baar baar dot use krna make ths code tidy, so we can directly use the courseInstructure
+//course.courseInstructer => ese baar baar dot use krna make the code tidy, so we can directly use the courseInstructure
 
 // const {courseInstructer}=course;
 // console.log(courseInstructer);

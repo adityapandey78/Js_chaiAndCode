@@ -37,9 +37,9 @@ const obj5=Object.assign({},obj1,obj2,obj3);//blank braces in case of resulting 
 const obj6={...obj1, ...obj2,...obj3};
 
 console.log("Concate of the objects");
-console.log(obj4);
-console.log(obj5);
-console.log(obj6);
+console.log("Object 4",obj4);
+console.log("Object 5",obj5);
+console.log("Object 6",obj6);
 
 
 const users=[

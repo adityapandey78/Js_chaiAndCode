@@ -13,12 +13,12 @@ myArr.pop(6);
 console.log(myArr);
 
 myArr.unshift(10);//it adds the element at the starting of the array
-console.log(myArr);
+console.log("Unshift", myArr);
 
 
-//delet the first element
+//delete the first element
 myArr.shift()
-console.log(myArr);
+console.log( "Shifted Array",myArr);
 
 console.log(myArr.indexOf(5)); //prints the element at the index 5
 

@@ -3,7 +3,7 @@ const dc_Heros=["superman","flash","batman"];
 
 //marvel_Heros.push(dc_Heros);
 
-//it pushes the dc_Heroes into the marvel heroes but as it pushes , the marverl heroes takes the whole array at its single element
+//it pushes the dc_Heroes into the marvel heroes but as it pushes , the marverl heroes takes the whole array at its single element since the dc_heroes are the array itself
 console.log(marvel_Heros);
 //=>Output= [ 'thor', 'IronMan', 'spiderman', [ 'superman', 'flash', 'batman' ] ]
 //it is taking the array as its data 
@@ -13,13 +13,13 @@ console.log(marvel_Heros);
 //++++++++++++ Concat Function+++++++++++
 const allheroes=marvel_Heros.concat(dc_Heros);
 //it also adds the two array but here also it takes as the array of two
-//It not just adds two array but also makes a new array and gives the o/p
+//🎈It not just adds two array but also makes a new array and gives the o/p
 
 console.log(marvel_Heros);
 console.log(allheroes);
 
-//+++++++++++++ Spread Operator+++++++++++++++
-//stand operator also concats the arrays and it is used more 
+//+++++++++++++ 🍻Spread Operator 🍻+++++++++++++++
+//spread operator also concats the arrays and it is used more 
 const allNewHeros= [...marvel_Heros, ...dc_Heros];
 console.log(allNewHeros);
 
@@ -27,7 +27,7 @@ console.log(allNewHeros);
 
 //It concats the array and its subarrays into a flat array including all 
 const another_array=[1,2,3,4,5,6,[4,6,9],[9,3,6,[6,8],5]]
-
+//depth mtlb dadde ke andar dabba
 const real_another_array=another_array.flat(Infinity) //infinity is for depths of the array By defaluts it takes all
 console.log(real_another_array);
 
