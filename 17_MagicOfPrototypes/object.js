@@ -25,6 +25,13 @@ const chai= new createUser("chai",25); //new user create hone se upar  wale prot
 //otherwise error aayewga sine bydefault  use ni honge
 const tea= new createUser("tea",250);
 chai.printMe()
+
+
+
+
+
+
+
 /*
 
 Here's what happens behind the scenes when the new keyword is used:
