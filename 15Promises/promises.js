@@ -1,6 +1,6 @@
 //we can create a new instance for the promises just like classs
 const promiseOne= new Promise(function(resolve,reject){
-    //promise do chijon ko intaje krta hai resolve and reject
+    //promise do chijon ko intake krta hai resolve and reject
 //do any async task
 //DB Calls, Cryptography,Network
 setTimeout(function(){
@@ -41,7 +41,7 @@ const promiseThree=new Promise(function(resolve,reject){
         // usually hum object pass krte hain
     },1000)
 })
-promiseThree.then(function(user){ //.then se promise resove hota hai and idhr ab data bhi le liya hai
+promiseThree.then(function(user){ //.then se promise resolve hota hai and idhr ab data bhi le liya hai
         console.log(user); //isse ab user pass ho jaayega 
 })
 
@@ -68,10 +68,10 @@ const promisefour =new Promise(function(resolve,reject){
 promisefour.then((user)=>{
     console.log(user);
     return user.username;
-    //itne se user ka username fetch kr liya and ab iske baad chaing krange .then ki furtehr deep down jaaye data ke
+    //itne se user ka username fetch kr liya and ab iske baad change krange .then ki further deep down jaaye data ke
 }).then((username)=>{
     console.log(username);
-}).catch(function (error) { //.catch aaya huwa data catch krega jo bhi aaya ho agar error aaya hai ya fir rejection aaya hai to
+}).catch(function (error) { //.catch aaya huya data catch krega jo bhi aaya ho agar error aaya hai ya fir rejection aaya hai to
     console.log(error);
     //➡️jab upar error true rhega to error print hoga agar upar error false kr degnge to data catch krega
 }).finally(()=> console.log("the promise is either resolved or rejected!"));
@@ -118,7 +118,7 @@ consumePromiseFive2();
 async function getAllUsers(){
     try {
         const response =await fetch('https://jsonplaceholder.typicode.com/users');
-        //isse ye reponse me data fetcg krke storekrega
+        //isse ye reponse me data fetch krke storekrega
         //fetch krne me bhi time lgta hai isliye whn bhi await lgaya hai
         const data= await response.json() //convert hone me bhio time lgta hai islye yhni await likha hai otherwise ye conde work nji kr paata sahi se
         console.log(data);
