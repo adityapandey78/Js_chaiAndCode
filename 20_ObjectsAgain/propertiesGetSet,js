@@ -1,6 +1,8 @@
 //Object ki define properties use hoti hain getter and setter vegera ko use krne me
 
 //old method for the getter and setter stuffs
+
+//=>function  Based getter andsetter
 function User(email,password){
     this._email=email;
     this._password=password;

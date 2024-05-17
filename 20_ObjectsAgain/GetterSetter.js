@@ -1,3 +1,4 @@
+//class based getter and setter
 class User{
      constructor(email,password){
         this._email=email;

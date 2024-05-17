@@ -1,0 +1,22 @@
+//Object Based getter and setter
+const User={
+ _email:'Aditya@ai',
+ _password:"abc",
+
+ get email(){
+    return this._email.toUpperCase();
+ },
+ set email(value){
+    this._email=value;
+ }
+}
+
+//isme ek benefgit hota hai ki isme factory function use kr skte hain
+
+//ye method bahut purana ho gya hai wese ye
+
+//ab use ni krte
+
+const tea= Object.create(User);//ye factory function ek object bnayega on the basis of User object jo uski saari properties of inherit kr lega
+
+console.log(tea.email);
