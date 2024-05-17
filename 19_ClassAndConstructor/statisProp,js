@@ -1,0 +1,22 @@
+class User{
+    constructor(username){
+        this.username=username;
+    }
+    logMe(){
+        console.log(`Username: ${this.username}`);
+    }
+    static createId(){
+        return `123`;
+    }
+}
+const aditya =new User("Aditya");
+//console.log(aditya.createId()); since whn static likha hai to uska access ni hoga yeh
+class Teacher extends user{
+    constructor(username,email){
+        super(username)
+        this.email=email;
+    }
+}
+
+const iphone=new Teacher("iphone","i@phjone.com");
+console.log();(iphone.createId)//sinec static hai wo, toh wo child ko bhi acces ni degi wo
