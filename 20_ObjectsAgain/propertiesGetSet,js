@@ -1,0 +1,26 @@
+//Object ki define properties use hoti hain getter and setter vegera ko use krne me
+
+//old method for the getter and setter stuffs
+function User(email,password){
+    this._email=email;
+    this._password=password;
+
+    Object.defineProperty(this,'email',{
+        get: function(){
+            return this._email.toUpperCase();
+        },
+        set: function(value){
+            this._email=value;
+        }
+    })
+    Object.defineProperty(this,'password',{
+        get: function(){
+            return this._password.toUpperCase();
+        },
+        set: function(value){
+            this._password=value;
+        }
+    })
+}
+const Aditya= new User("Chai@gmail","Chai");
+console.log(Aditya.email);
