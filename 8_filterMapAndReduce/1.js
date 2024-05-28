@@ -10,7 +10,7 @@
 //++++++++++ >Filter< ++++++++++++++
 
 const myNums=[1,2,3,4,5,6,7,8,9,10]
-//same as maps in filter asklo for the explicit return you have to write return as you have defined its scope in the cury braces
+//same as maps in filter aslo for the explicit return you have to write return as you have defined its scope in the curly braces
 
 // const newNums= myNums.filter((num)=>{
 //     return num>4
