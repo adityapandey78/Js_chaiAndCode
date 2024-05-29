@@ -29,6 +29,14 @@ html, body{
     left: 50%;
     transform: translateX(-50%);
 }
+#page3 img{
+    height: 20%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    top: 50%;
+    transform: translateY(-50%);
+}
 #page3{
     height: 100%;
     width: 100%;

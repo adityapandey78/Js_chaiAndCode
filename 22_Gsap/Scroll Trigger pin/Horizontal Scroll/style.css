@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+#page1{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+#page2{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(240, 66, 101);
+}
+#page2 h1{
+    font-size: 35vw;
+    
+}
+#page3{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
