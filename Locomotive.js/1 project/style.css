@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+/* Jab locomotive js ko use krte hain toh main ko height ya width ni dete
+that's why we have used height:100vh
+100% will seek from its parent*/
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(123, 87, 42);
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(15, 9, 1);
+}
