@@ -5,7 +5,7 @@ tl.from("#nav h3",{
     opacity:0,
     delay:0.5,
     duration:1,
-    stagger:0.2, //jitna secc ka time liya utne sec ke interval me leke aayega
+    stagger:0.2, //jitna secc ka time liya utne sec ke interval me baaki uske childs aayenge
 })
 
 tl.from("#main h1",{

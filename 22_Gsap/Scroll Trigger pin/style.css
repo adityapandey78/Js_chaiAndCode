@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 'Gilroy';
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#page1{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+    
+}
+#page2{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(244, 199, 140);
+
+}
+#page2 img{
+    height: 100%;
+    width: 20%;
+    position: relative;
+    object-fit: cover;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#page3{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(244, 146, 17);
+
+}
