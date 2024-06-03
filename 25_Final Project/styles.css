@@ -16,20 +16,44 @@ html,body{
     position: fixed;
     z-index: 999;
     background-color: #0b0b0b;
-    padding: 25vh 15vw;
+    padding: 25vh 10vw;
 }
 .line{
    
     height: fit-content;
     overflow: hidden;/* Overflow hidden se ye hoga ki iske gsap me to y 150 de rakhi hain and idhr hai ki overflow hidden ho gya us div se so isi karan ye just neeche se hi aaata hua appear hota hai rather than y 150 se */
-     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vw;
     
 }
+#line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2vw; 
+}
+#line1-part1 h5, #line1-part1 h6{
+    font-size: 2.5vw;
+    font-weight: 100;
+    font-family: 'silk serif';
+}
+
 .line h1{
     font-size: 6.5vw;
     text-transform: uppercase;
     font-weight: 500;
     
+}
+.line h2{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+#line1-part1 h5{
+width: 5vw;
+text-align: right;
 }
 #main{
     position:relative;
