@@ -14,6 +14,16 @@ html,body{
     height: 100%;
     width: 100%;
 }
+#crsr{
+   height: 2vw;
+   width: 2vw;
+   border-radius: 50%;
+   border: 1px solid#ffffffbb;
+   position: fixed;
+   z-index: 999; 
+   mix-blend-mode: difference; /* jab dusre color me jaaya toh iska color dusra ho jaayega*/
+   transform: translate(-50%,-50%);
+}
 #loader{
     height: 100%;
     width: 100%;
@@ -51,7 +61,7 @@ html,body{
     
 }
 .line h2{
-    font-size: 5vw;
+    font-size: 4.8vw;
     text-transform: uppercase;
     font-weight: 900;
     opacity: 0;
@@ -130,6 +140,13 @@ text-align: right;
     /* background-color: red; */
     margin-left: 27%;
     width: 70%;
+    height: fit-content;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999;
 }
 
 .hero:nth-child(2){
@@ -142,4 +159,15 @@ text-align: right;
     text-transform: uppercase;
     line-height: 7vw;
     font-weight: 600;
+}
+.hero h2, .hero h3{
+    font-size: 7.2vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+    font-weight: 600;
+}
+.hero h2:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;   
+    font-weight: 500;
 }

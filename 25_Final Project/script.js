@@ -42,5 +42,25 @@ function loadingAnimantion(){
         display:"none"
     
     })
+    tl.from("#nav",{ //it will make the hero segment appear more smoothly
+       opacity:0,
+    })
+    tl.from("#hero1 h1, #hero2 h1, #hero3 h2 ,#hero4 h1",{ //it will make the hero segment appear more smoothly
+        y:120,
+        stagger:0.2
+    })
 }
 loadingAnimantion();
+
+
+function crsrAnimation(){ // function for circle cursor
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#crsr",{
+            left:dets.x,
+            top:dets.y
+        })
+    })
+    // https://www.npmjs.com/package/sheryjs imported from here
+    Shery.makeMagnet("#nav-part2 h4" );
+}
+crsrAnimation(); 
