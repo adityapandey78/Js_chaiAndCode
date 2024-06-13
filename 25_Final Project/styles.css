@@ -13,6 +13,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 #crsr{
    height: 2vw;
@@ -20,7 +21,7 @@ html,body{
    border-radius: 50%;
    border: 1px solid#ffffffbb;
    position: fixed;
-   z-index: 999; 
+   z-index: 99; 
    mix-blend-mode: difference; /* jab dusre color me jaaya toh iska color dusra ho jaayega*/
    transform: translate(-50%,-50%);
 }
@@ -110,12 +111,14 @@ text-align: right;
 }
 #main{
     position:relative;
-    background-color: #030303;
+    background-color:#151515;
 }
 #page1{
     height: 100vh;
     width: 100%;
-    background-color: #151515;
+    /* background-color: #151515; */
+    position: relative;
+    z-index: 100;
 
 
 }
@@ -160,14 +163,142 @@ text-align: right;
     line-height: 7vw;
     font-weight: 600;
 }
-.hero h2, .hero h3{
+.hero h2{
     font-size: 7.2vw;
     text-transform: uppercase;
     line-height: 7vw;
     font-weight: 600;
+    border-bottom: 0.5vw solid white;
+    padding-bottom: 0.8vw;
+    /* transition: all ease 0.3s; */ /*iske chaltye baar baar issue aa rha tha*/
 }
 .hero h2:hover{
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 2px #fff;
     color: transparent;   
     font-weight: 500;
+    border-bottom: 0.5vw solid #ffffff00;
+}
+
+/* Page 2*/
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    padding: top 17vh;
+    position: relative;
+}
+#video-container{
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    left: 28%;
+    /* border: 5px solid maroon; */
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg );
+}
+#video-container img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-cursor{
+    background-color: #ffa63d;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    position: absolute;
+    top:-10%;
+    left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+#video-cursor i{
+    font-size: 2.5vw;
+}
+
+/*Page 3*/
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #6e6767;
+    position: relative;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 7vh 0;
+}    
+
+#page4-content{
+    width: 73vw;
+    position: relative;
+    margin-left: 28%;
+
+}
+#page4-content h1{
+font-size: 7vw;
+text-transform: uppercase;
+}
+#page4-content .underline{
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+#page4-content>p{/*this > targets the just child of the id , it doesnot let apply the nested p in another div*/
+   font-size: 2.2vw;
+   width: 50%;
+   margin-bottom: 5vw;
+
+}
+#page4-flex{
+    display: flex;
+}
+
+#page4-flex img{
+    width: 50%;
+}
+#page4-flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 2vw;
+}
+#page4-blue-div{
+    background-color: #3f7df4;
+    width: 33vw;
+    padding: 4vw 2vw;
+    position: relative;
+    margin-top: -35vh;
+    margin-left: 26vw;
+}
+.blue-div-elem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    padding: 1.5vw 0;
+    border-bottom: 2px solid #d9d7d7;
+      
+}
+.blue-div-elem h4{
+ font-size:2vw ;
+}
+.blue-div-elem p{
+    width: 40%;
+    font-size: 1vw;
+}
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
 }
