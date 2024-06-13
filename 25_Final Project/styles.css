@@ -145,10 +145,10 @@ text-align: right;
     width: 70%;
     height: fit-content;
     overflow: hidden;
+    overflow-y:hidden ;/* ye isliye bnaya ki before wala text hai wo sahi se kaam kare*/
 
     display: flex;
     align-items: center;
-    position: relative;
     z-index: 999;
 }
 
@@ -162,6 +162,16 @@ text-align: right;
     text-transform: uppercase;
     line-height: 7vw;
     font-weight: 600;
+    position: relative;
+}
+#hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: 22%;
+    top: 29%;
 }
 .hero h2{
     font-size: 7.2vw;
@@ -248,6 +258,16 @@ text-align: right;
 #page4-content h1{
 font-size: 7vw;
 text-transform: uppercase;
+position: relative;
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -10%;
+    top: 8%;
 }
 #page4-content .underline{
     height: 1px;
@@ -299,9 +319,11 @@ text-transform: uppercase;
 }
 
 #page5{
-    min-height: 100vh;
+    min-height: 20vh;
     width: 100%;
     position: relative;
+   
+    
 }
 .page5-elem{
    /* background-color: red; */
@@ -355,14 +377,73 @@ text-transform: uppercase;
     animation-iteration-count: infinite;
     animation-direction: reverse;
      
- }
- .page5-elem span{
+}
+.page5-elem span{
     font-style: italic ;
     font-family: "silk serif";
     color: transparent;
- }
- .page5-elem2 span{
+}
+.page5-elem2 span{
     font-style: italic ;
     font-family: "silk serif";
     color: transparent;
- }
+}
+#footer{
+    height:85vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding-left: 28vw;
+    margin-top: 5vw;
+    padding-right: 2vw;
+
+    
+}
+#footer h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    /* background-color: blue ;; */
+    position: relative;
+   
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -10%;
+    top: 8%;
+}
+.underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 3vw 0;
+}
+#footer-div{
+    display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+     padding-right: 15vw;
+     padding-top: 4vw;
+     margin-bottom: 3vw;
+}
+
+#footer-div h6{
+    font-size: 1vw;
+    margin-bottom: 1.5vw;
+    font-weight: 500;
+}
+.box{
+    width: 20%;
+}
+#footer-div h5{
+    font-size: 1.4vw;
+    margin: 0;
+    font-weight: 500;
+}
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+}
