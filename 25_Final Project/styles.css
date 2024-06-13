@@ -301,4 +301,68 @@ text-transform: uppercase;
 #page5{
     min-height: 100vh;
     width: 100%;
+    position: relative;
 }
+.page5-elem{
+   /* background-color: red; */
+    white-space: nowrap; 
+    overflow-x: hidden; /*Extra material flow ho ske*/
+    margin-bottom: -2vw;
+}
+.page5-elem h1{
+    font-size: 6vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+
+    /*Applying the animation*/
+    animation-name: anime2;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes anime2 {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px))    
+    }
+}
+
+.page5-elem2{
+    /* background-color: red; */
+     white-space: nowrap; 
+     overflow-x: hidden; /*Extra material flow ho ske*/
+     margin-bottom: -2vw;
+ }
+ .page5-elem2 h1{
+     font-size: 6vw;
+     -webkit-text-stroke: 1px #fff;
+     font-weight: 400;
+     text-transform: uppercase;
+     color: transparent;
+     display: inline-block;
+     transform: translateX(calc(-100% -20%));
+ 
+     /*Applying the animation*/
+     animation-name: anime2;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+     
+ }
+ .page5-elem span{
+    font-style: italic ;
+    font-family: "silk serif";
+    color: transparent;
+ }
+ .page5-elem2 span{
+    font-style: italic ;
+    font-family: "silk serif";
+    color: transparent;
+ }
