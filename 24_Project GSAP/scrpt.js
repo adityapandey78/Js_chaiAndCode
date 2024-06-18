@@ -37,8 +37,10 @@ function textSplitting(){
             clutter+= `<span>${e}</span>`
         });
         elem.innerHTML= clutter
+        console.log(clutter);
     
     })
+    
 }
 
 function gsapAnimation(){

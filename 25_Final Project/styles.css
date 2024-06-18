@@ -1,7 +1,23 @@
 @font-face {
-    font-family: "Plain Light","silk serif",;
-    src: url();
+    font-family: "Plain Light";
+    src: url(./fonts/plain-regular-webfont.ttf);
 }
+
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-light-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +25,7 @@
     /* font-family: PP Woodland; */
     font-family: "Plain Light";
     color: white;
+    cursor:pointer;
 }
 html,body{
     height: 100%;
@@ -20,6 +37,7 @@ html,body{
     background-color: rgb(255, 255, 255);
     scale: 2;
     mix-blend-mode: difference;
+    
 }
 /* #crsr{
    height: 2vw;
@@ -36,8 +54,8 @@ html,body{
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 999;
-    background-color: #0b0b0b;
+    z-index: 9999;
+    background-color: #030303;
     padding: 25vh 10vw;
 }
 .line{
@@ -46,7 +64,7 @@ html,body{
     overflow: hidden;/* Overflow hidden se ye hoga ki iske gsap me to y 150 de rakhi hain and idhr hai ki overflow hidden ho gya us div se so isi karan ye just neeche se hi aaata hua appear hota hai rather than y 150 se */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 2.5vw;
     
 }
@@ -56,24 +74,29 @@ html,body{
     justify-content: center;
     gap: 1.2vw; 
 }
-#line1-part1 h5, #line1-part1 h6{
+#line1-part1 h5, 
+#line1-part1 h6{
     font-size: 2.5vw;
     font-weight: 100;
     font-family: 'silk serif';
+}
+#line1-part1 h5{
+    width: 5vw;
+    text-align: right;
 }
 
 .line h1{
     font-size: 6.5vw;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 900;
     
 }
 .line h2{
-    font-size: 4.8vw;
+    font-size: 5vw;
     text-transform: uppercase;
     font-weight: 900;
     opacity: 0;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
@@ -296,6 +319,10 @@ text-align: right;
     height: 29vw;
     width: 22vw;
 }
+.image-div:nth-child(5){
+    height: 29vw;
+    width: 22vw;
+}
 .image-div img{
     height: 100%;
     width: 100%;
@@ -337,6 +364,24 @@ height: 30%;
 .page3-circle2 svg{
 height: 30%;
 rotate: -45deg;
+}
+.page3-circle3{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
+
+    align-items: center;
+    justify-content: center;  
+    position: relative;
+    margin-top: 2vw;
+    margin-right: 3vw;
+    margin-left: 35vw;
+}
+.page3-circle3 svg{
+height: 30%;
 }
 .circle-in{
     height: 100%;
@@ -380,6 +425,12 @@ rotate: -45deg;
 .page3-circle2:hover .circle-in p{
     scale: 1;
 } 
+.page3-circle3:hover .circle-in{
+    scale: 1;
+}
+.page3-circle3:hover .circle-in p{
+    scale: 1;
+} 
 
 #page4{
     min-height: 100vh;
@@ -408,17 +459,31 @@ position: relative;
     left: -10%;
     top: 8%;
 }
+#about-obys{
+    font-size: 5em;
+    line-height: 1.5;
+}
+#about-obys span{
+    color: #fff;
+    overflow: hidden;
+}
 #page4-content .underline{
     height: 1px;
     width: 100%;
     background-color: #fff;
     margin: 5vw 0;
 }
-#page4-content>p{/*this > targets the just child of the id , it doesnot let apply the nested p in another div*/
+#page4-content #intro h2{
    font-size: 2.2vw;
    width: 50%;
-   margin-bottom: 5vw;
-
+   font-family: "PP woodland";
+   color: #fff;
+}
+#intro {
+    margin-bottom: 5vw;
+}
+#intro h2 span{
+    font-family: "PP woodland";
 }
 #page4-flex{
     display: flex;
@@ -471,7 +536,7 @@ position: relative;
     margin-bottom: -2vw;
 }
 .page5-elem h1{
-    font-size: 6vw;
+    font-size: 7vw;
     -webkit-text-stroke: 1px #fff;
     font-weight: 400;
     text-transform: uppercase;
@@ -481,7 +546,7 @@ position: relative;
 
     /*Applying the animation*/
     animation-name: anime2;
-    animation-duration: 12s;
+    animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -501,7 +566,7 @@ position: relative;
      margin-bottom: -2vw;
  }
  .page5-elem2 h1{
-     font-size: 6vw;
+     font-size: 7vw;
      -webkit-text-stroke: 1px #fff;
      font-weight: 400;
      text-transform: uppercase;
@@ -511,7 +576,7 @@ position: relative;
  
      /*Applying the animation*/
      animation-name: anime2;
-    animation-duration: 12s;
+    animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: reverse;
@@ -561,21 +626,23 @@ position: relative;
 }
 
 #footer-text h2 {
-    font-size: 9.7vw;
+    font-size: 7.2vw;
+    text-transform: uppercase;
     position: absolute;
     top: -10%;
     font-weight: 500;
-    opacity: 0;
+    
     left: 0;
     font-family: "silk serif";
-}
-
-#footer-text h2 span {
+  }
+  
+  #footer-text h2 span {
     font-family: "silk serif";
     opacity: 0;
     -webkit-text-stroke: 1px #fff;
     color: transparent;
-}
+  }
+  
 
 .underline{
     height: 2px;

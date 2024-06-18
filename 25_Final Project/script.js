@@ -62,7 +62,7 @@ function loadingAnimantion(){
     tl.to("#loader",{
         opacity:0,
         duration:0.2,
-        delay:1 // 1 sec ke baad jo loader hai wo disappear ho jaayega
+        delay:2.6 // 2.6 sec ke baad jo loader hai wo disappear ho jaayega
     })
     tl.from("#page1",{
          delay:0.2,
@@ -83,8 +83,7 @@ function loadingAnimantion(){
         stagger:0.2,
     })
 }
-
-   
+ 
 // function crsrAnimation(){ // function for circle cursor
 //     document.addEventListener("mousemove",function(dets){
 //         gsap.to("#crsr",{
@@ -137,10 +136,12 @@ var videoPlay=document.querySelector("#video-container video");
         
         flag=0
        }
+       
     })
+    
     videoContainer.addEventListener("mouseleave",function(){
         gsap.to(".mousefollower",{
-            display:"initial"
+           opacity:1,
         });
         gsap.to("#video-cursor",{
             top:"-15%",
@@ -148,19 +149,83 @@ var videoPlay=document.querySelector("#video-container video");
         })
     })
 }
+
 // // https://www.npmjs.com/package/sheryjs imported from here
 // Shery.makeMagnet("#nav-part2 h4" );
 
-function sheryAnimation(){
-    Shery.imageEffect(".image-div",{
-        style:5,
-        gooey:true,
-        debug:false,
-        config:{"a":{"value":2,"range":[0,30]},"b":{"value":-0.65,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.7272611844751101},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":false},"maskVal":{"value":1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.37,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10.69,"range":[0,100]}},
-    });
-};
+function sheryAnimation() {
+    
+Shery.imageEffect(".image-div", {
+    style: 5,
+    gooey: true,
+    debug: false,
+    config: 
+    {"a":{"value":2.52,"range":[0,30]},"b":{"value":-0.59,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.7586106934170648},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":true},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.46,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":4.58,"range":[0,100]}}
+});
+}
+function page4Animation(){
+    var tl2= gsap.timeline();
+    function aboutObys(){
+        var texts="";
+        document
+        .querySelector("#about-obys")
+        .textContent.split("")
+        .forEach(function(elem){
+            texts+=`<span>${elem}</span>`;
+        });
+        document
+        .querySelector("#about-obys").innerHTML=texts;
+        console.log(texts);
+        tl2.from("#about-obys span",{
+            bottom: 200, // Adjust this value if needed to make letters come from below
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.1,
+            scrollTrigger: {
+            trigger: "#about-obys span",
+            scroller: "#main",
+            markers: false,
+            start: "top 80%",
+            end: "top 45%",
+            scrub: 2,
+            
+        }
+    
+        });
+    }
+    function aboutObysText(){
+        
+        let allh2=document.querySelectorAll("#intro h2");
+        allh2.forEach(function(elem){
+            var garbage=""
+            var alltexts=elem.textContent;
+            var splittedTexts=alltexts.split("");
+            //console.log(splittedTexts);
+            splittedTexts.forEach(function(e){
+                garbage+=`<span>${e}</span>`
+            });
+            elem.innerHTML=garbage;
+            //console.log(garbage);
+        });
+        tl2.to("#page4-content #intro h2 span",{
+            color:"#Ffdb58",
+            // color:"#fff",
+            stagger:0.1,
+            scrollTrigger:{
+                trigger:"#intro",
+                scroller:"#main",
+                markers:false,
+                start:"top 50%",
+                end:"top 10%",
+                scrub:1.25
+            }
 
-
+        })
+        
+    }
+    aboutObys();
+    aboutObysText();
+}
 
 function flagAnimation(){
     document.addEventListener("mousemove",function(dets){
@@ -182,47 +247,65 @@ function flagAnimation(){
 }
 
 function footerAnimation() {
+    var clutter = "";
+    var clutter2 = "";
+    document
+      .querySelector("#footer h1")
+      .textContent.split("")
+      .forEach(function (elem) {
+        clutter += `<span>${elem}</span>`;
+      });
+    document.querySelector("#footer h1").innerHTML = clutter;
+    document
+      .querySelector("#footer h2")
+      .textContent.split("")
+      .forEach(function (elem) {
+        clutter2 += `<span>${elem}</span>`;
+      });
+    document.querySelector("#footer h2").innerHTML = clutter2;
+  
+    document
+    .querySelector("#footer-text")
+    .addEventListener("mouseenter", function () {
+      gsap.to("#footer h1 span", {
+        opacity: 0,
+        duration: 0.3, // Increase speed by reducing duration
+        stagger: 0.05,
+      });
+      gsap.to("#footer h2 span", {
+        delay: 0.15, // Adjust delay to match increased speed
+        opacity: 1,
+        duration: 0.3, // Increase speed by reducing duration
+        stagger: 0.05,
+      });
+    });
 
-    var clutter = ""
-    var clutter2 = ""
-    document.querySelector("#footer h1").textContent.split("").forEach(function (elem) {
-      clutter += `<span>${elem}</span>`
-    })
-    document.querySelector("#footer h1").innerHTML = clutter
-    document.querySelector("#footer h2").textContent.split("").forEach(function (elem) {
-      clutter2 += `<span>${elem}</span>`
-    })
-    document.querySelector("#footer h2").innerHTML = clutter2
-  
-  
-    document.querySelector("#footer-text").addEventListener("mouseenter", function () {
-      gsap.to("#footer h1 span", {
-        opacity: 0,
-        stagger: 0.05
-      })
-      gsap.to("#footer h2 span", {
-        delay: 0.35,
-        opacity: 1,
-        stagger: 0.1
-      })
-    })
-    document.querySelector("#footer-text").addEventListener("mouseleave", function () {
+  document
+    .querySelector("#footer-text")
+    .addEventListener("mouseleave", function () {
       gsap.to("#footer h1 span", {
         opacity: 1,
-        stagger: 0.1,
-        delay: 0.35,
-  
-      })
+        duration: 0.3, // Increase speed by reducing duration
+        stagger: 0.05,
+        delay: 0.15, // Adjust delay to match increased speed
+      });
       gsap.to("#footer h2 span", {
         opacity: 0,
-        stagger: 0.05
-      })
-    })
-  }
+        duration: 0.3, // Increase speed by reducing duration
+        stagger: 0.05,
+      });
+    });
+}
+function imageAnimation(){
+
+}
+  
+
 
 loadingAnimantion();
 locomotiveAnimation();
-flagAnimation()
+flagAnimation();
 crsrAnimation(); 
+page4Animation()
 sheryAnimation();
 footerAnimation();
